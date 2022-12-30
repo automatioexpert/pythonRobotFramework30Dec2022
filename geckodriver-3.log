@@ -1,0 +1,13 @@
+1672416275268	geckodriver	INFO	Listening on 127.0.0.1:55137
+1672416278334	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55138" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\valmiki\\AppData\\Local\\Temp\\rust_mozprofileC3sERu"
+1672416283539	Marionette	INFO	Marionette enabled
+1672416283562	Marionette	INFO	Listening on port 55151
+Read port: 55151
+WebDriver BiDi listening on ws://127.0.0.1:55138
+1672416286537	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\valmiki\\AppData\\Local\\Temp\\rust_mozprofileC3sERu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55138/devtools/browser/d667adf0-63e6-49fc-9922-9dd2d0ea1ea7
+JavaScript warning: https://www.amazon.com/ line 2217 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672416389673	Marionette	INFO	Stopped listening on port 55151
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
