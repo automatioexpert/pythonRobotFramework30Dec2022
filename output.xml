@@ -1,60 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221230 10:51:39.693" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\Users\valmiki\PycharmProjects\PythonSelenium\pythonRobotFramework30Dec2022\TestCases\TC1.robot">
-<test id="s1-t1" name="LoginTest" line="7">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221230 11:37:44.658" rpa="false" schemaversion="3">
+<suite id="s1" name="RadioButton" source="C:\Users\valmiki\PycharmProjects\PythonSelenium\pythonRobotFramework30Dec2022\TestCases\RadioButton.robot">
+<test id="s1-t1" name="Testing Radio Button and checkboxes" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.saucedemo.com</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221230 10:51:39.930" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
-<status status="PASS" starttime="20221230 10:51:39.930" endtime="20221230 10:51:43.146"/>
+<msg timestamp="20221230 11:37:44.883" level="INFO">Opening browser 'chrome' to base url 'https://www.way2automation.com/way2auto_jquery/registration.php#load_box'.</msg>
+<status status="PASS" starttime="20221230 11:37:44.883" endtime="20221230 11:37:50.393"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221230 10:51:43.147" endtime="20221230 10:51:43.275"/>
+<status status="PASS" starttime="20221230 11:37:50.393" endtime="20221230 11:37:50.509"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>css:input#user-name</arg>
-<arg>standard_user</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221230 10:51:43.277" level="INFO">Typing text 'standard_user' into text field 'css:input#user-name'.</msg>
-<status status="PASS" starttime="20221230 10:51:43.275" endtime="20221230 10:51:43.386"/>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>xpath://*[contains(text(),'Single')]</arg>
+<arg>Single</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20221230 11:37:50.509" level="INFO">Selecting 'Single' from radio button 'xpath://*[contains(text(),'Single')]'.</msg>
+<msg timestamp="20221230 11:37:50.697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221230 11:37:50.698" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='radio' and @name='xpath://*[contains(text(),'Single')]' and (@value='Single' or @id='Single')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='radio' and @name='xpath://*[contains(text(),'Single')]' and (@value='Single' or @id='Single')]' is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CFF243]
+	(No symbol) [0x00C87FD1]
+	(No symbol) [0x00B7D04D]
+	(No symbol) [0x00B7FD34]
+	(No symbol) [0x00B7FBE5]
+	(No symbol) [0x00B7FE80]
+	(No symbol) [0x00BABD55]
+	(No symbol) [0x00BAC22B]
+	(No symbol) [0x00BDE64C]
+	(No symbol) [0x00BC85D4]
+	(No symbol) [0x00BDC9EB]
+	(No symbol) [0x00BC8386]
+	(No symbol) [0x00BA163C]
+	(No symbol) [0x00BA269D]
+	GetHandleVerifier [0x00F99A22+2655074]
+	GetHandleVerifier [0x00F8CA24+2601828]
+	GetHandleVerifier [0x00DA8C0A+619850]
+	GetHandleVerifier [0x00DA7830+614768]
+	(No symbol) [0x00C905FC]
+	(No symbol) [0x00C95968]
+	(No symbol) [0x00C95A55]
+	(No symbol) [0x00CA051B]
+	BaseThreadInitThunk [0x764400F9+25]
+	RtlGetAppContainerNamedObjectPath [0x770F7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x770F7B8E+238]
+</msg>
+<status status="FAIL" starttime="20221230 11:37:50.509" endtime="20221230 11:37:50.699"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>css:input#password</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221230 10:51:43.386" level="INFO">Typing text 'secret_sauce' into text field 'css:input#password'.</msg>
-<status status="PASS" starttime="20221230 10:51:43.386" endtime="20221230 10:51:43.476"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>6</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221230 11:37:50.701" endtime="20221230 11:37:50.701"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:login-button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221230 10:51:43.476" level="INFO">Clicking button 'name:login-button'.</msg>
-<status status="PASS" starttime="20221230 10:51:43.476" endtime="20221230 10:51:43.574"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20221230 11:37:50.701" endtime="20221230 11:37:50.701"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>Get Title</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221230 10:51:43.575" level="INFO">Get Title</msg>
-<status status="PASS" starttime="20221230 10:51:43.575" endtime="20221230 10:51:43.575"/>
-</kw>
-<kw name="Close Window" library="SeleniumLibrary">
-<doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20221230 10:51:43.575" endtime="20221230 10:51:43.725"/>
-</kw>
-<status status="PASS" starttime="20221230 10:51:39.930" endtime="20221230 10:51:43.726"/>
+<status status="FAIL" starttime="20221230 11:37:44.882" endtime="20221230 11:37:50.702">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //input[@type='radio' and @name='xpath://*[contains(text(),'Single')]' and (@value='Single' or @id='Single')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//input[@type='radio' and @name='xpath://*[contains(text(),'Single')]' and (@value='Single' or @id='Single')]' is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00CFF243]
+	(No symbol) [0x00C87FD1]
+	(No symbol) [0x00B7D04D]
+	(No symbol) [0x00B7FD34]
+	(No symbol) [0x00B7FBE5]
+	(No symbol) [0x00B7FE80]
+	(No symbol) [0x00BABD55]
+	(No symbol) [0x00BAC22B]
+	(No symbol) [0x00BDE64C]
+	(No symbol) [0x00BC85D4]
+	(No symbol) [0x00BDC9EB]
+	(No symbol) [0x00BC8386]
+	(No symbol) [0x00BA163C]
+	(No symbol) [0x00BA269D]
+	GetHandleVerifier [0x00F99A22+2655074]
+	GetHandleVerifier [0x00F8CA24+2601828]
+	GetHandleVerifier [0x00DA8C0A+619850]
+	GetHandleVerifier [0x00DA7830+614768]
+	(No symbol) [0x00C905FC]
+	(No symbol) [0x00C95968]
+	(No symbol) [0x00C95A55]
+	(No symbol) [0x00CA051B]
+	BaseThreadInitThunk [0x764400F9+25]
+	RtlGetAppContainerNamedObjectPath [0x770F7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x770F7B8E+238]
+</status>
 </test>
-<status status="PASS" starttime="20221230 10:51:39.694" endtime="20221230 10:51:43.728"/>
+<status status="FAIL" starttime="20221230 11:37:44.659" endtime="20221230 11:37:50.705"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="RadioButton">RadioButton</stat>
 </suite>
 </statistics>
 <errors>
