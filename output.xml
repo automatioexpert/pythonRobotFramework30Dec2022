@@ -1,68 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221230 19:35:27.690" rpa="false" schemaversion="3">
-<suite id="s1" name="BrowserNavigation" source="C:\Users\valmiki\PycharmProjects\PythonSelenium\pythonRobotFramework30Dec2022\TestCases\BrowserNavigation.robot">
-<test id="s1-t1" name="Testing Radio Button and checkboxes" line="10">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221230 23:57:23.921" rpa="false" schemaversion="3">
+<suite id="s1" name="HandlingWebtable" source="C:\Users\valmiki\PycharmProjects\PythonSelenium\pythonRobotFramework30Dec2022\TestCases\HandlingWebtable.robot">
+<test id="s1-t1" name="HandlingWebTableTest" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221230 19:35:28.166" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/windows'.</msg>
-<status status="PASS" starttime="20221230 19:35:28.166" endtime="20221230 19:35:39.783"/>
+<msg timestamp="20221230 23:57:24.173" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20221230 23:57:24.173" endtime="20221230 23:57:34.717"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221230 19:35:39.785" endtime="20221230 19:35:39.925"/>
+<status status="PASS" starttime="20221230 23:57:34.718" endtime="20221230 23:57:34.849"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221230 19:35:39.951" level="INFO">${location} = http://the-internet.herokuapp.com/windows</msg>
-<status status="PASS" starttime="20221230 19:35:39.925" endtime="20221230 19:35:39.951"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${location}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221230 19:35:39.954" endtime="20221230 19:35:39.955"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://www.google.com</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221230 19:35:39.955" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20221230 19:35:39.955" endtime="20221230 19:35:44.581"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location2}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221230 19:35:44.599" level="INFO">${location2} = https://www.google.com/</msg>
-<status status="PASS" starttime="20221230 19:35:44.584" endtime="20221230 19:35:44.599"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${header}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221230 23:57:34.878" level="INFO">${header} = 4</msg>
+<status status="PASS" starttime="20221230 23:57:34.850" endtime="20221230 23:57:34.878"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${location2}</arg>
+<arg>${header}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221230 19:35:44.600" endtime="20221230 19:35:44.602"/>
+<status status="PASS" starttime="20221230 23:57:34.879" endtime="20221230 23:57:34.879"/>
 </kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20221230 19:35:44.603" endtime="20221230 19:35:44.676"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221230 23:57:34.892" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20221230 23:57:34.880" endtime="20221230 23:57:34.892"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${location3}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221230 19:35:44.709" level="INFO">${location3} = http://the-internet.herokuapp.com/windows</msg>
-<status status="PASS" starttime="20221230 19:35:44.677" endtime="20221230 19:35:44.709"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${cols}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr/td</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221230 23:57:34.905" level="INFO">${cols} = 24</msg>
+<status status="PASS" starttime="20221230 23:57:34.893" endtime="20221230 23:57:34.905"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${location3}</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221230 19:35:44.711" endtime="20221230 19:35:44.713"/>
+<status status="PASS" starttime="20221230 23:57:34.905" endtime="20221230 23:57:34.906"/>
 </kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20221230 19:35:44.714" endtime="20221230 19:35:51.014"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${cols}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221230 23:57:34.907" endtime="20221230 23:57:34.907"/>
 </kw>
-<status status="PASS" starttime="20221230 19:35:28.164" endtime="20221230 19:35:51.016"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>//table[@name='BookTable']/tbody/tr[2]/td</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221230 23:57:34.941" level="INFO">${data} = Learn Selenium</msg>
+<status status="PASS" starttime="20221230 23:57:34.917" endtime="20221230 23:57:34.941"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221230 23:57:34.942" endtime="20221230 23:57:34.942"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>Author</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20221230 23:57:34.943" endtime="20221230 23:57:34.984"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20221230 23:57:34.984" endtime="20221230 23:57:35.023"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>5</arg>
+<arg>2</arg>
+<arg>Mukesh</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20221230 23:57:35.075" level="INFO">Table cell contains 'Mukesh'.</msg>
+<status status="PASS" starttime="20221230 23:57:35.023" endtime="20221230 23:57:35.075"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20221230 23:57:35.075" endtime="20221230 23:57:35.110"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221230 23:57:35.111" endtime="20221230 23:57:37.220"/>
+</kw>
+<status status="PASS" starttime="20221230 23:57:24.172" endtime="20221230 23:57:37.222"/>
 </test>
-<status status="PASS" starttime="20221230 19:35:27.695" endtime="20221230 19:35:51.021"/>
+<status status="PASS" starttime="20221230 23:57:23.937" endtime="20221230 23:57:37.230"/>
 </suite>
 <statistics>
 <total>
@@ -71,7 +105,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="BrowserNavigation">BrowserNavigation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="HandlingWebtable">HandlingWebtable</stat>
 </suite>
 </statistics>
 <errors>

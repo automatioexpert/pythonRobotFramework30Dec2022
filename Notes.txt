@@ -1,8 +1,15 @@
+#Use below commands to put in a batch file to run the execution from the command line
+
+
+cd C:\Users\valmiki\PycharmProjects\PythonSelenium\pythonRobotFramework30Dec2022
+robot TestCases\HandlingWebtable.robot
+
+#For running execution in headless mode:
 *** Settings ***
 Library     SeleniumLibrary
 
 *** Variables ***
-${browser}  headlesschrome
+${browser}  chrome
 ${url}  http://the-internet.herokuapp.com/javascript_alerts
 
 
